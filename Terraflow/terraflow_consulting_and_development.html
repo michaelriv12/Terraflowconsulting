@@ -1,0 +1,949 @@
++<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TERRAFLOW Consulting and Development | Smart Solutions. Sustainable Growth.</title>
+  <meta name="description" content="Firma de consultoría especializada en eficiencia agrícola, gestión del agua, sistemas de riego Rain Bird en Belize y desarrollo del talento humano.">
+  
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Custom Configuration based on TERRAFLOW Logo Palette -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            terra: {
+              dark: '#1B5E20',
+              primary: '#2E7D32',
+              light: '#4CAF50',
+              tint: '#E8F5E9',
+            },
+            flow: {
+              dark: '#004B87',
+              primary: '#0066B3',
+              light: '#0288D1',
+              cyan: '#29B6F6',
+              tint: '#E1F5FE',
+            },
+            slate: {
+              950: '#09111E',
+            }
+          },
+          boxShadow: {
+            'soft': '0 10px 40px -10px rgba(0, 75, 135, 0.08)',
+            'card': '0 4px 24px -4px rgba(15, 23, 42, 0.06)',
+            'glow-flow': '0 10px 30px -5px rgba(0, 102, 179, 0.25)',
+            'glow-terra': '0 10px 30px -5px rgba(46, 125, 50, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bg-agro-pattern {
+      background-color: #ffffff;
+      background-image: 
+        radial-gradient(at 88% 12%, rgba(2, 136, 209, 0.07) 0px, transparent 50%),
+        radial-gradient(at 10% 85%, rgba(76, 175, 80, 0.08) 0px, transparent 50%);
+    }
+    .text-gradient-terraflow {
+      background: linear-gradient(135deg, #2E7D32 0%, #0066B3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 102, 179, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(46, 125, 50, 0.04) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-flow-primary selection:text-white">
+
+  <!-- Sticky Navigation Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo (High-precision SVG matching TERRAFLOW identity) -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none">
+        <!-- SVG Droplet Emblem -->
+        <div class="w-11 h-11 shrink-0 transition-transform duration-300 group-hover:scale-105">
+          <svg viewBox="0 0 120 130" class="w-full h-full drop-shadow-sm" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#005A9C"/>
+                <stop offset="60%" stop-color="#0288D1"/>
+                <stop offset="100%" stop-color="#81D4FA"/>
+              </linearGradient>
+              <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7CB342"/>
+                <stop offset="100%" stop-color="#2E7D32"/>
+              </linearGradient>
+              <linearGradient id="waterGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#0288D1"/>
+                <stop offset="50%" stop-color="#0066B3"/>
+                <stop offset="100%" stop-color="#004B87"/>
+              </linearGradient>
+              <clipPath id="dropletClip">
+                <path d="M60 6 C60 6 14 54 14 84 C14 109.4 34.6 126 60 126 C85.4 126 106 109.4 106 84 C106 54 60 6 60 6 Z"/>
+              </clipPath>
+            </defs>
+            
+            <g clip-path="url(#dropletClip)">
+              <!-- White base -->
+              <rect x="0" y="0" width="120" height="130" fill="#FFFFFF"/>
+              
+              <!-- Upper Blue Sky Droplet Tip -->
+              <path d="M60 4 L110 56 C96 48 82 47 72 52 C68 41 56 39 48 46 C43 40 36 36 28 36 Z" fill="url(#skyGrad)"/>
+              
+              <!-- Left Agricultural Leaf -->
+              <path d="M32 34 C14 54 12 86 34 108 C31 85 33 62 42 46 C37 59 34 76 36 96 C45 78 46 54 32 34 Z" fill="url(#leafGrad)"/>
+              
+              <!-- Human Figure (Dark Navy Blue) -->
+              <circle cx="62" cy="49" r="7.5" fill="#004B87"/>
+              <path d="M38 44 C47 50 53 56 55 64 C55 72 51 80 46 86 L57 86 C62 78 66 69 70 62 C76 57 82 54 89 52 C79 52 70 54 64 58 C58 53 49 47 38 44 Z" fill="#004B87"/>
+              
+              <!-- Right Green Crop Furrows -->
+              <path d="M62 82 C75 70 92 67 108 72 L108 81 C92 76 77 78 66 86 Z" fill="#558B2F"/>
+              <path d="M70 89 C82 81 95 79 108 84 L108 93 C95 88 83 89 74 94 Z" fill="#33691E"/>
+              
+              <!-- Bottom Blue Flowing Water Waves -->
+              <path d="M26 95 C44 84 64 89 82 96 C92 100 100 99 108 96 L108 104 C96 108 84 106 72 101 C56 94 40 92 26 99 Z" fill="url(#waterGrad)"/>
+              <path d="M28 105 C46 98 63 105 80 109 C91 111 99 109 106 106 C97 121 79 127 60 127 C43 127 32 118 28 105 Z" fill="#005A9C"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Typography Lockup -->
+        <div class="leading-none">
+          <div class="font-display font-extrabold text-xl sm:text-2xl tracking-tight">
+            <span class="text-terra-primary">TERRA</span><span class="text-flow-primary">FLOW</span>
+          </div>
+          <div class="text-[9px] sm:text-[10px] font-bold tracking-[0.18em] text-flow-dark uppercase mt-0.5">
+            — Consulting and Development —
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#propuesta" class="hover:text-flow-primary transition-colors">Propuesta de Valor</a>
+        <a href="#divisiones" class="hover:text-flow-primary transition-colors">Divisiones</a>
+        <a href="#rainbird" class="hover:text-terra-primary transition-colors flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-flow-light"></span> Rain Bird Belize
+        </a>
+        <a href="#metodologia" class="hover:text-flow-primary transition-colors">Metodología</a>
+        <a href="#configurador" class="hover:text-flow-primary transition-colors">Solicitar Propuesta</a>
+      </nav>
+
+      <!-- Header CTA Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <!-- NOTE: To change to a Belize (+501) number later, replace 50230988136 with 5016798353 -->
+        <a href="https://wa.me/5016798353?text=Estimado%20Ing.%20Miguel%20Angel%20Rivera,%20me%20gustar%C3%ADa%20coordinar%20una%20reuni%C3%B3n%20breve%20con%20TERRAFLOW%20Consulting%20and%20Development." target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-terra-primary to-flow-primary hover:from-terra-dark hover:to-flow-dark text-white font-semibold text-xs tracking-wide shadow-md hover:shadow-glow-flow flex items-center gap-2 transition-all transform hover:-translate-y-0.5">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          Agendar Reunión
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" aria-label="Abrir menú" class="lg:hidden p-2 text-slate-700 hover:text-flow-primary rounded-lg focus:outline-none">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden px-6 pt-3 pb-6 bg-white border-b border-slate-200 space-y-3 shadow-xl">
+      <a href="#propuesta" class="block text-sm font-medium text-slate-700 hover:text-flow-primary py-1.5 mobile-link">Propuesta de Valor</a>
+      <a href="#divisiones" class="block text-sm font-medium text-slate-700 hover:text-flow-primary py-1.5 mobile-link">Ingeniería y Desarrollo Humano</a>
+      <a href="#rainbird" class="block text-sm font-medium text-terra-primary py-1.5 mobile-link">Representación Rain Bird en Belize</a>
+      <a href="#metodologia" class="block text-sm font-medium text-slate-700 hover:text-flow-primary py-1.5 mobile-link">Metodología de Trabajo</a>
+      <a href="#configurador" class="block text-sm font-medium text-slate-700 hover:text-flow-primary py-1.5 mobile-link">Configurador de Propuesta</a>
+      <a href="https://wa.me/5016798353?text=Estimado%20Ing.%20Miguel%20Angel%20Rivera,%20me%20gustar%C3%ADa%20coordinar%20una%20reuni%C3%B3n%20breve%20con%20TERRAFLOW." target="_blank" rel="noopener noreferrer" class="w-full text-center block py-3 rounded-xl bg-gradient-to-r from-terra-primary to-flow-primary text-white font-bold text-sm shadow-md mobile-link">
+        Coordinar Reunión por WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-agro-pattern hero-grid border-b border-slate-100 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Executive Pitch -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Location & Brand Tagline Pill -->
+          <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-200/90 shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-terra-light animate-pulse"></span>
+            <span class="text-xs font-semibold text-slate-600 tracking-wide">
+              Belize (Stann Creek) &amp; Región &bull; <em class="text-flow-primary font-serif italic font-semibold">Smart Solutions. Sustainable Growth.</em>
+            </span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+            Eficiencia Agrícola, Gestión del Agua y <span class="text-gradient-terraflow">Desarrollo del Talento</span>
+          </h1>
+
+          <!-- Subtitle / Executive Summary -->
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Ayudamos a fincas y empresas agroindustriales a optimizar sus sistemas de riego y drenaje, reducir costos operativos y fortalecer el liderazgo de sus supervisores y equipos de trabajo mediante soluciones prácticas e indicadores medibles.
+          </p>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#configurador" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-flow-primary hover:bg-flow-dark text-white font-bold text-sm sm:text-base shadow-lg shadow-flow-primary/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+              <i data-lucide="sliders" class="w-5 h-5"></i>
+              Solicitar Diagnóstico Técnico
+            </a>
+            
+            <a href="https://wa.me/5016798353?text=Hola%20Ing.%20Miguel%20Angel%20Rivera,%20nos%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20TERRAFLOW%20Consulting%20and%20Development." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-white hover:bg-terra-tint/50 text-slate-800 border border-slate-300 hover:border-terra-primary font-semibold text-sm sm:text-base transition-all flex items-center justify-center gap-2.5">
+              <i data-lucide="message-square" class="w-5 h-5 text-terra-primary"></i>
+              Contactar a Dirección
+            </a>
+          </div>
+
+          <!-- Key Pillars Strip -->
+          <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+            <div>
+              <div class="font-display font-extrabold text-xl sm:text-2xl text-flow-primary">Riego &amp; Drenaje</div>
+              <p class="text-xs text-slate-500 mt-0.5">Diagnóstico y eficiencia hídrica</p>
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-xl sm:text-2xl text-terra-primary">Rain Bird</div>
+              <p class="text-xs text-slate-500 mt-0.5">Representación oficial en Belize</p>
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-xl sm:text-2xl text-slate-800">Talento Humano</div>
+              <p class="text-xs text-slate-500 mt-0.5">Liderazgo y equipos operativos</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Executive Presentation Card -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -inset-2 bg-gradient-to-tr from-terra-light/20 via-flow-light/20 to-transparent rounded-3xl blur-xl"></div>
+            
+            <div class="relative bg-white rounded-3xl border border-slate-200/90 p-7 sm:p-8 shadow-soft space-y-6">
+              
+              <!-- Full Brand Emblem Showcase -->
+              <div class="flex flex-col items-center text-center pb-6 border-b border-slate-100">
+                <svg viewBox="0 0 120 130" class="w-20 h-20 mb-3" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#dropletClip)">
+                    <rect x="0" y="0" width="120" height="130" fill="#FFFFFF"/>
+                    <path d="M60 4 L110 56 C96 48 82 47 72 52 C68 41 56 39 48 46 C43 40 36 36 28 36 Z" fill="url(#skyGrad)"/>
+                    <path d="M32 34 C14 54 12 86 34 108 C31 85 33 62 42 46 C37 59 34 76 36 96 C45 78 46 54 32 34 Z" fill="url(#leafGrad)"/>
+                    <circle cx="62" cy="49" r="7.5" fill="#004B87"/>
+                    <path d="M38 44 C47 50 53 56 55 64 C55 72 51 80 46 86 L57 86 C62 78 66 69 70 62 C76 57 82 54 89 52 C79 52 70 54 64 58 C58 53 49 47 38 44 Z" fill="#004B87"/>
+                    <path d="M62 82 C75 70 92 67 108 72 L108 81 C92 76 77 78 66 86 Z" fill="#558B2F"/>
+                    <path d="M70 89 C82 81 95 79 108 84 L108 93 C95 88 83 89 74 94 Z" fill="#33691E"/>
+                    <path d="M26 95 C44 84 64 89 82 96 C92 100 100 99 108 96 L108 104 C96 108 84 106 72 101 C56 94 40 92 26 99 Z" fill="url(#waterGrad)"/>
+                    <path d="M28 105 C46 98 63 105 80 109 C91 111 99 109 106 106 C97 121 79 127 60 127 C43 127 32 118 28 105 Z" fill="#005A9C"/>
+                  </g>
+                </svg>
+                <div class="font-display font-extrabold text-2xl tracking-tight">
+                  <span class="text-terra-primary">TERRA</span><span class="text-flow-primary">FLOW</span>
+                </div>
+                <p class="text-[11px] font-bold tracking-[0.2em] text-flow-dark uppercase mt-1">
+                  — Consulting and Development —
+                </p>
+                <p class="font-serif italic text-flow-light text-sm mt-1">
+                  Smart Solutions. Sustainable Growth.
+                </p>
+              </div>
+
+              <!-- Dual Synergy Summary -->
+              <div class="space-y-3.5 text-sm">
+                <div class="p-3.5 rounded-2xl bg-flow-tint/60 border border-flow-light/20 flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-flow-primary text-white flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="droplets" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-slate-900">División de Ingeniería Hídrica</h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Evaluación de riego, control de escorrentía, drenajes y suministro oficial <strong>Rain Bird</strong>.</p>
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-terra-tint/70 border border-terra-light/25 flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-terra-primary text-white flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-slate-900">Desarrollo del Talento Humano</h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Programas para personal operativo, supervisores, personal administrativo y gerencia.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Director Signature Footer -->
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                <div>
+                  <span class="font-bold text-slate-900 block">Ing. Miguel Angel Rivera</span>
+                  <span class="text-slate-500">Director &bull; TERRAFLOW</span>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold">
+                  Entregables &amp; KPIs
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Propuesta de Valor / Impacto en la Operación Agrícola -->
+  <section id="propuesta" class="py-20 bg-slate-50/80 border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-terra-primary">
+          Propuesta de Valor Integral
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Resultados tangibles para productores y empresas agroindustriales
+        </h2>
+        <p class="text-slate-600 text-base">
+          Combinamos ingeniería de campo con fortalecimiento organizacional para transformar puntos críticos en ventajas competitivas.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Benefit 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-card hover:border-flow-light transition-all">
+          <div class="w-12 h-12 rounded-xl bg-flow-tint text-flow-primary flex items-center justify-center mb-4">
+            <i data-lucide="droplet" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Optimización del Uso del Agua</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Eficientamos los sistemas de riego existentes para asegurar uniformidad hídrica en cada lote y evitar desperdicios del recurso.
+          </p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-card hover:border-terra-light transition-all">
+          <div class="w-12 h-12 rounded-xl bg-terra-tint text-terra-primary flex items-center justify-center mb-4">
+            <i data-lucide="trending-down" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Reducción de Costos Operativos</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Identificamos fugas hidráulicas, fallas operativas y reprocesos administrativos que elevan el costo por hectárea producida.
+          </p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-card hover:border-flow-light transition-all">
+          <div class="w-12 h-12 rounded-xl bg-flow-tint text-flow-primary flex items-center justify-center mb-4">
+            <i data-lucide="sprout" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Incremento de la Producción</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Un manejo preciso de humedad del suelo y drenaje sano se traduce directamente en mayor vigor del cultivo y rendimiento por cosecha.
+          </p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-card hover:border-terra-light transition-all">
+          <div class="w-12 h-12 rounded-xl bg-terra-tint text-terra-primary flex items-center justify-center mb-4">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Facilitación de Certificaciones</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Documentación técnica, registros hídricos y personal capacitado para cumplir con auditorías y estándares internacionales de exportación.
+          </p>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-card hover:border-flow-light transition-all">
+          <div class="w-12 h-12 rounded-xl bg-flow-tint text-flow-primary flex items-center justify-center mb-4">
+            <i data-lucide="waves" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Control de Drenajes y Escorrentía</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Diagnóstico especializado para prevenir encharcamientos, erosión de suelos y pérdidas radiculares en temporadas de alta precipitación.
+          </p>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-card hover:border-terra-light transition-all">
+          <div class="w-12 h-12 rounded-xl bg-terra-tint text-terra-primary flex items-center justify-center mb-4">
+            <i data-lucide="network" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Coordinación y Liderazgo Efectivo</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Alineamos la comunicación entre campo, mantenimiento, oficina y gerencia, desarrollando líderes capaces de ejecutar con excelencia.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Two Specialized Divisions Section -->
+  <section id="divisiones" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-flow-primary">
+          Nuestras Áreas de Especialidad
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Dos divisiones integradas para el éxito de su empresa
+        </h2>
+        <p class="text-slate-600 text-base">
+          Ofrecemos servicios individuales o paquetes integrales adaptados a las prioridades de cada finca u organización.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Division 1: Ingeniería en Riego y Drenaje -->
+        <div class="lg:col-span-6 rounded-3xl border-2 border-flow-primary/20 bg-gradient-to-b from-flow-tint/40 to-white p-8 sm:p-10 flex flex-col justify-between shadow-soft">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-flow-primary text-white text-xs font-bold uppercase tracking-wider mb-6">
+              <i data-lucide="compass" class="w-4 h-4"></i>
+              División de Ingeniería
+            </div>
+
+            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">
+              Asesoría Técnica en Riego y Drenaje
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-8">
+              Soluciones hidráulicas y agronómicas diseñadas para maximizar la eficiencia del recurso hídrico y proteger la infraestructura productiva de su finca.
+            </p>
+
+            <!-- Engineering Checklist -->
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-flow-primary/10 text-flow-primary flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4 stroke-[2.5]"></i>
+                </div>
+                <span class="text-sm font-medium text-slate-800">Evaluación y diagnóstico integral de sistemas de riego.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-flow-primary/10 text-flow-primary flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4 stroke-[2.5]"></i>
+                </div>
+                <span class="text-sm font-medium text-slate-800">Evaluación de drenajes superficiales, subsuperficiales y escorrentía.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-flow-primary/10 text-flow-primary flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4 stroke-[2.5]"></i>
+                </div>
+                <span class="text-sm font-medium text-slate-800">Recomendaciones técnicas para el manejo eficiente del agua.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-flow-primary/10 text-flow-primary flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4 stroke-[2.5]"></i>
+                </div>
+                <span class="text-sm font-medium text-slate-800">Planificación y supervisión en campo de mejoras hidráulicas.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-flow-primary/10 text-flow-primary flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4 stroke-[2.5]"></i>
+                </div>
+                <span class="text-sm font-medium text-slate-800">Capacitación técnica práctica para regadores, trabajadores y supervisores.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-flow-primary/10 text-flow-primary flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4 stroke-[2.5]"></i>
+                </div>
+                <span class="text-sm font-medium text-slate-800">Planes de mejora continua y acompañamiento técnico periódico.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Official Rain Bird Belize Highlight Card -->
+          <div id="rainbird" class="rounded-2xl bg-flow-dark text-white p-5 sm:p-6 relative overflow-hidden shadow-lg">
+            <div class="absolute right-0 top-0 w-32 h-32 bg-flow-light/20 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="flex items-start gap-4 relative z-10">
+              <div class="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
+                <i data-lucide="badge-check" class="w-7 h-7 text-sky-300"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-sky-300 block mb-1">
+                  Alianza Estratégica Oficial
+                </span>
+                <h4 class="font-display font-bold text-lg text-white">
+                  Representación de Rain Bird en Belize
+                </h4>
+                <p class="text-xs sm:text-sm text-sky-100/90 mt-1.5 leading-relaxed">
+                  Contamos con la representación oficial de <strong>Rain Bird</strong> en Belize, permitiéndonos surtir directamente sus requerimientos de equipos, válvulas, aspersores, goteo y materiales originales con respaldo técnico especializado.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Division 2: Capacitación y Desarrollo Humano -->
+        <div class="lg:col-span-6 rounded-3xl border-2 border-terra-primary/20 bg-gradient-to-b from-terra-tint/40 to-white p-8 sm:p-10 flex flex-col justify-between shadow-soft">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-terra-primary text-white text-xs font-bold uppercase tracking-wider mb-6">
+              <i data-lucide="users" class="w-4 h-4"></i>
+              División de Desarrollo Humano
+            </div>
+
+            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">
+              Capacitación y Fortalecimiento Organizacional
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Programas formativos prácticos diseñados a medida para cada nivel de su organización: <strong>personal operativo, supervisores, personal de oficina y gerencia</strong>.
+            </p>
+
+            <!-- 10 Training Modules Grid -->
+            <div class="grid sm:grid-cols-2 gap-3 mb-8">
+              <div class="p-3 rounded-xl bg-white border border-slate-200/90 flex items-center gap-2.5 shadow-2xs">
+                <span class="w-6 h-6 rounded-lg bg-terra-tint text-terra-primary font-bold text-xs flex items-center justify-center shrink-0">01</span>
+                <span class="text-xs sm:text-sm font-semibold text-slate-800">Liderazgo efectivo</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-slate-200/90 flex items-center gap-2.5 shadow-2xs">
+                <span class="w-6 h-6 rounded-lg bg-terra-tint text-terra-primary font-bold text-xs flex items-center justify-center shrink-0">02</span>
+                <span class="text-xs sm:text-sm font-semibold text-slate-800">Comunicación asertiva</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-slate-200/90 flex items-center gap-2.5 shadow-2xs">
+                <span class="w-6 h-6 rounded-lg bg-terra-tint text-terra-primary font-bold text-xs flex items-center justify-center shrink-0">03</span>
+                <span class="text-xs sm:text-sm font-semibold text-slate-800">Trabajo en equipo</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-slate-200/90 flex items-center gap-2.5 shadow-2xs">
+                <span class="w-6 h-6 rounded-lg bg-terra-tint text-terra-primary font-bold text-xs flex items-center justify-center shrink-0">04</span>
+                <span class="text-xs sm:text-sm font-semibold text-slate-800">Administración del tiempo</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-slate-200/90 flex items-center gap-2.5 shadow-2xs">
+                <span class="w-6 h-6 rounded-lg bg-terra-tint text-terra-primary font-bold text-xs flex items-center justify-center shrink-0">05</span>
+                <span class="text-xs sm:text-sm font-semibold text-slate-800">Gestión de emociones en el trabajo</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-slate-200/90 flex items-center gap-2.5 shadow-2xs">
+                <span class="w-6 h-6 rounded-lg bg-terra-tint text-terra-primary font-bold text-xs flex items-center justify-center shrink-0">06</span>
+                <span class="text-xs sm:text-sm font-semibold text-slate-800">Adaptación al cambio</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-slate-200/90 flex items-center gap-2.5 shadow-2xs">
+                <span class="w-6 h-6 rounded-lg bg-terra-tint text-terra-primary font-bold text-xs flex items-center justify-center shrink-0">07</span>
+                <span class="text-xs sm:text-sm font-semibold text-slate-800">Actitud laboral positiva</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-slate-200/90 flex items-center gap-2.5 shadow-2xs">
+                <span class="w-6 h-6 rounded-lg bg-terra-tint text-terra-primary font-bold text-xs flex items-center justify-center shrink-0">08</span>
+                <span class="text-xs sm:text-sm font-semibold text-slate-800">Resolución de conflictos</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-slate-200/90 flex items-center gap-2.5 shadow-2xs sm:col-span-2">
+                <span class="w-6 h-6 rounded-lg bg-terra-tint text-terra-primary font-bold text-xs flex items-center justify-center shrink-0">09</span>
+                <span class="text-xs sm:text-sm font-semibold text-slate-800">Supervisión efectiva y retroalimentación constructiva</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-slate-200/90 flex items-center gap-2.5 shadow-2xs sm:col-span-2">
+                <span class="w-6 h-6 rounded-lg bg-terra-tint text-terra-primary font-bold text-xs flex items-center justify-center shrink-0">10</span>
+                <span class="text-xs sm:text-sm font-semibold text-slate-800">Desarrollo de habilidades interpersonales para personal administrativo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Target Audiences Footer Box -->
+          <div class="rounded-2xl bg-terra-dark text-white p-5 sm:p-6">
+            <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-300 block mb-2">
+              Modalidades Flexibles
+            </span>
+            <p class="text-xs sm:text-sm text-emerald-50 leading-relaxed">
+              Talleres presenciales en finca o sala corporativa, con <strong>entregables definidos e indicadores de desempeño</strong> para medir la evolución de su equipo.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5-Step Methodology Section -->
+  <section id="metodologia" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-sky-400">
+          Nuestro Método de Trabajo
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Metodología estructurada en 5 etapas
+        </h2>
+        <p class="text-slate-300 text-base">
+          Garantizamos orden, claridad técnica y seguimiento con indicadores en cada proyecto que emprendemos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 relative hover:border-sky-400 transition-colors">
+          <div class="w-10 h-10 rounded-xl bg-flow-primary text-white font-display font-extrabold flex items-center justify-center mb-4">
+            1
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Diagnóstico</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Levantamiento en campo o evaluación organizacional para identificar oportunidades reales de mejora.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 relative hover:border-emerald-400 transition-colors">
+          <div class="w-10 h-10 rounded-xl bg-terra-primary text-white font-display font-extrabold flex items-center justify-center mb-4">
+            2
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Propuesta Técnica</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Presentación de soluciones prácticas, cronograma, alcance y presupuesto ajustado a sus prioridades.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 relative hover:border-sky-400 transition-colors">
+          <div class="w-10 h-10 rounded-xl bg-flow-primary text-white font-display font-extrabold flex items-center justify-center mb-4">
+            3
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Implementación Acordada</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Ejecución supervisada de mejoras en riego, drenaje, suministro Rain Bird o programas formativos.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 relative hover:border-emerald-400 transition-colors">
+          <div class="w-10 h-10 rounded-xl bg-terra-primary text-white font-display font-extrabold flex items-center justify-center mb-4">
+            4
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Capacitación</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Transferencia de conocimiento práctico a operarios, supervisores y equipo administrativo.
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 relative hover:border-sky-400 transition-colors sm:col-span-2 lg:col-span-1">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-terra-primary to-flow-primary text-white font-display font-extrabold flex items-center justify-center mb-4">
+            5
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Seguimiento y KPIs</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Medición con entregables definidos e indicadores de resultados para asegurar sostenibilidad.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Proposal Configurator -->
+  <section id="configurador" class="py-24 bg-agro-pattern border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-flow-tint text-flow-primary uppercase tracking-widest inline-block">
+          Atención Ejecutiva Directa
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Configure su Diagnóstico o Reunión
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Seleccione las prioridades de su finca o empresa y envíe una solicitud estructurada directamente al <strong>Ing. Miguel Angel Rivera</strong>.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-soft">
+        <form id="terraflowConfigurator" onsubmit="event.preventDefault(); sendProposalRequest();" class="space-y-8">
+          
+          <!-- Step 1: División / Servicio -->
+          <div>
+            <label class="block text-sm font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-flow-primary text-white text-xs flex items-center justify-center">1</span>
+              Seleccione el área de prioridad:
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              <label class="cursor-pointer">
+                <input type="radio" name="serviceArea" value="Ingeniería en Riego y Drenaje" checked class="peer sr-only" onchange="updateProposalPreview()">
+                <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50/60 peer-checked:border-flow-primary peer-checked:bg-flow-tint/60 transition-all h-full">
+                  <i data-lucide="droplets" class="w-5 h-5 text-flow-primary mb-2"></i>
+                  <span class="text-xs font-bold text-slate-900 block">Riego y Drenaje</span>
+                  <span class="text-[11px] text-slate-500">Diagnóstico y eficiencia hídrica</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="serviceArea" value="Suministro de Materiales Rain Bird (Belize)" class="peer sr-only" onchange="updateProposalPreview()">
+                <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50/60 peer-checked:border-flow-primary peer-checked:bg-flow-tint/60 transition-all h-full">
+                  <i data-lucide="package-check" class="w-5 h-5 text-flow-dark mb-2"></i>
+                  <span class="text-xs font-bold text-slate-900 block">Rain Bird Belize</span>
+                  <span class="text-[11px] text-slate-500">Equipos y repuestos originales</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="serviceArea" value="Capacitación y Desarrollo Humano" class="peer sr-only" onchange="updateProposalPreview()">
+                <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50/60 peer-checked:border-terra-primary peer-checked:bg-terra-tint/60 transition-all h-full">
+                  <i data-lucide="users" class="w-5 h-5 text-terra-primary mb-2"></i>
+                  <span class="text-xs font-bold text-slate-900 block">Desarrollo Humano</span>
+                  <span class="text-[11px] text-slate-500">Liderazgo, equipos y supervisión</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="serviceArea" value="Paquete Integral (Ingeniería + Capacitación)" class="peer sr-only" onchange="updateProposalPreview()">
+                <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50/60 peer-checked:border-terra-primary peer-checked:bg-gradient-to-br peer-checked:from-terra-tint/60 peer-checked:to-flow-tint/60 transition-all h-full">
+                  <i data-lucide="layers" class="w-5 h-5 text-terra-dark mb-2"></i>
+                  <span class="text-xs font-bold text-slate-900 block">Paquete Integral</span>
+                  <span class="text-[11px] text-slate-500">Solución completa con KPIs</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2: Datos de la Empresa / Finca -->
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div>
+              <label for="farmName" class="block text-xs font-bold text-slate-700 mb-1.5">Nombre de la Finca o Empresa *</label>
+              <input type="text" id="farmName" required placeholder="Ej: Silk Grass Farm" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-flow-primary">
+            </div>
+
+            <div>
+              <label for="contactPerson" class="block text-xs font-bold text-slate-700 mb-1.5">Nombre y Cargo del Contacto *</label>
+              <input type="text" id="contactPerson" required placeholder="Ej: Ing. Rony Gonzales / Gerente" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-flow-primary">
+            </div>
+
+            <div>
+              <label for="cropOrSector" class="block text-xs font-bold text-slate-700 mb-1.5">Cultivo o Sector Productivo</label>
+              <select id="cropOrSector" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 bg-white focus:outline-none focus:border-flow-primary">
+                <option value="Cítricos / Frutales">Cítricos / Frutales</option>
+                <option value="Banano / Plátano">Banano / Plátano</option>
+                <option value="Palma Aceitera / Caña">Palma Aceitera / Caña</option>
+                <option value="Hortalizas / Cultivos Intensivos">Hortalizas / Cultivos Intensivos</option>
+                <option value="Planta Agroindustrial / Empacadora">Planta Agroindustrial / Empacadora</option>
+                <option value="Otro sector agrícola / corporativo">Otro sector agrícola / corporativo</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 3: Nivel / Necesidad Específica -->
+          <div>
+            <label for="specificNotes" class="block text-xs font-bold text-slate-700 mb-1.5">Breve descripción de su necesidad o ubicación (Opcional):</label>
+            <input type="text" id="specificNotes" placeholder="Ej: Ubicados en Stann Creek, requerimos evaluación de sistema de riego por goteo y taller para supervisores." class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-flow-primary">
+          </div>
+
+          <!-- Dynamic Action Bar -->
+          <div class="rounded-2xl bg-slate-50 border border-slate-200 p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="space-y-1 text-center md:text-left">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-terra-primary block">Resumen de Solicitud:</span>
+              <div id="previewTitle" class="font-display font-bold text-base sm:text-lg text-slate-900">
+                Ingeniería en Riego y Drenaje
+              </div>
+              <p id="previewSubtitle" class="text-xs text-slate-500">
+                Coordinación de reunión breve para presentar propuesta técnica y económica a medida.
+              </p>
+            </div>
+
+            <button type="submit" class="w-full md:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-terra-primary to-flow-primary hover:from-terra-dark hover:to-flow-dark text-white font-bold text-sm shadow-lg transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2.5 shrink-0">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              Coordinar Reunión por WhatsApp
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Leadership & Direct Contact Section -->
+  <section id="contacto" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-slate-900 text-white p-8 sm:p-12 shadow-2xl grid lg:grid-cols-12 gap-10 items-center relative overflow-hidden">
+        
+        <div class="absolute -right-16 -bottom-16 w-72 h-72 bg-flow-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-16 -top-16 w-72 h-72 bg-terra-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Leadership Card -->
+        <div class="lg:col-span-7 space-y-5 relative z-10">
+          <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-sky-300 text-xs font-bold uppercase tracking-wider">
+            Dirección Ejecutiva
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            Atención directa y compromiso con sus resultados
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            "Agradeceremos la oportunidad de coordinar una reunión breve para conocer las prioridades de su empresa, darle más detalles de nuestros servicios y presentar una propuesta técnica y económica ajustada a sus necesidades."
+          </p>
+
+          <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div class="font-display font-bold text-xl text-white">Ing. Miguel Angel Rivera</div>
+              <div class="text-sm text-emerald-400 font-medium">Director &bull; TERRAFLOW Consulting and Development</div>
+              <div class="text-xs text-slate-400 mt-1 flex items-center gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-sky-400"></i> Stann Creek, Belize &amp; Operaciones Regionales
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Action Box -->
+        <div class="lg:col-span-5 bg-slate-800/90 border border-slate-700 rounded-2xl p-6 sm:p-8 space-y-5 relative z-10">
+          <h3 class="font-display font-bold text-lg text-white">Canales de Contacto Directo</h3>
+          
+          <div class="space-y-3 text-sm">
+            <a href="https://wa.me/5016798353?text=Estimado%20Ing.%20Miguel%20Angel%20Rivera,%20deseo%20informaci%C3%B3n%20sobre%20TERRAFLOW." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3.5 rounded-xl bg-emerald-600/20 border border-emerald-500/40 hover:bg-emerald-600/30 transition-colors text-white">
+              <i data-lucide="phone-call" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+              <div>
+                <span class="font-bold block">WhatsApp Directo</span>
+                <span class="text-xs text-emerald-200">+502 3098 8136</span>
+              </div>
+            </a>
+
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/70 border border-slate-700/80 text-slate-200">
+              <i data-lucide="droplets" class="w-5 h-5 text-sky-400 shrink-0"></i>
+              <div>
+                <span class="font-bold block text-xs uppercase tracking-wider text-slate-400">Suministros Oficiales</span>
+                <span class="text-sm font-semibold text-white">Distribuidor Autorizado Rain Bird en Belize</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5016798353?text=Estimado%20Ing.%20Miguel%20Angel%20Rivera,%20me%20gustar%C3%ADa%20agendar%20una%20reuni%C3%B3n%20breve." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-white text-slate-900 hover:bg-slate-100 font-bold text-sm text-center block shadow-md transition-colors">
+            Iniciar Conversación Ahora
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Footer -->
+  <footer class="bg-slate-950 text-slate-400 text-xs py-12 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
+        <div class="text-center md:text-left">
+          <div class="font-display font-extrabold text-xl tracking-tight">
+            <span class="text-terra-light">TERRA</span><span class="text-flow-cyan">FLOW</span>
+          </div>
+          <p class="text-[10px] tracking-[0.2em] uppercase text-slate-400 mt-0.5">
+            Consulting and Development
+          </p>
+          <p class="font-serif italic text-sky-400 text-xs mt-1">
+            Smart Solutions. Sustainable Growth.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-slate-300 font-medium">
+          <a href="#propuesta" class="hover:text-white transition-colors">Propuesta de Valor</a>
+          <a href="#divisiones" class="hover:text-white transition-colors">Ingeniería &amp; Riego</a>
+          <a href="#divisiones" class="hover:text-white transition-colors">Desarrollo Humano</a>
+          <a href="#rainbird" class="hover:text-white transition-colors">Rain Bird Belize</a>
+          <a href="#configurador" class="hover:text-white transition-colors">Solicitar Reunión</a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-slate-500">
+        <div>
+          &copy; <span id="currentYear"></span> TERRAFLOW Consulting and Development. Todos los derechos reservados.
+        </div>
+        <div>
+          Eficiencia Agrícola &bull; Gestión Hídrica &bull; Desarrollo del Talento Humano
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5016798353?text=Hola%20TERRAFLOW,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20consultor%C3%ADa." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 group flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-3.5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105" aria-label="Contactar por WhatsApp">
+    <i data-lucide="message-circle" class="w-6 h-6 fill-current"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out font-bold text-sm">
+      Contactar a TERRAFLOW
+    </span>
+  </a>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Dynamic year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // WhatsApp target number (Update here if switching to Belize +501 number)
+    const TERRAFLOW_WHATSAPP = '5016798353';
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Update Configurator Preview
+    function updateProposalPreview() {
+      const selectedArea = document.querySelector('input[name="serviceArea"]:checked')?.value || 'Ingeniería en Riego y Drenaje';
+      const titleEl = document.getElementById('previewTitle');
+      const subtitleEl = document.getElementById('previewSubtitle');
+
+      if (!titleEl || !subtitleEl) return;
+
+      titleEl.textContent = selectedArea;
+
+      if (selectedArea.includes('Rain Bird')) {
+        subtitleEl.textContent = 'Cotización de equipos, válvulas, tubería y accesorios originales Rain Bird con soporte técnico en Belize.';
+      } else if (selectedArea.includes('Desarrollo Humano')) {
+        subtitleEl.textContent = 'Diseño de programa formativo a medida para operarios, supervisores, personal administrativo o gerencia.';
+      } else if (selectedArea.includes('Paquete Integral')) {
+        subtitleEl.textContent = 'Diagnóstico hidráulico en campo + fortalecimiento de equipos de trabajo con entregables e indicadores.';
+      } else {
+        subtitleEl.textContent = 'Evaluación técnica de sistemas de riego, drenajes y escorrentía para optimización hídrica.';
+      }
+    }
+
+    // Send Structured Proposal Request via WhatsApp
+    function sendProposalRequest() {
+      const area = document.querySelector('input[name="serviceArea"]:checked')?.value || 'Consultoría General';
+      const farm = document.getElementById('farmName').value.trim();
+      const contact = document.getElementById('contactPerson').value.trim();
+      const sector = document.getElementById('cropOrSector').value;
+      const notes = document.getElementById('specificNotes').value.trim();
+
+      let message = `Estimado Ing. Miguel Angel Rivera (TERRAFLOW Consulting and Development), solicitamos coordinar una reunión breve:\n\n`;
+      message += `🏢 *Empresa / Finca:* ${farm}\n`;
+      message += `👤 *Contacto:* ${contact}\n`;
+      message += `🌱 *Cultivo / Sector:* ${sector}\n`;
+      message += `📋 *Área de Interés:* ${area}\n`;
+      if (notes) {
+        message += `📝 *Detalle / Ubicación:* ${notes}\n`;
+      }
+      message += `\nQuedamos atentos para agendar la visita o reunión técnica. Saludos.`;
+
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/${TERRAFLOW_WHATSAPP}?text=${encoded}`, '_blank');
+    }
+  </script>
+</body>
+</html>
