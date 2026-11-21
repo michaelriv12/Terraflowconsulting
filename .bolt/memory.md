@@ -18,10 +18,12 @@
 - Hover effects on cards ("efecto sutil al pasar el cursor").
 - Navigation: top nav menu, mobile menu, and footer links — all kept in sync when new sections are added.
 - Multiple HTML files in the project (at least two pages share styling/structure).
+- Card grid redistributes after brand removal to avoid empty spaces.
 
 ## Decisions, constraints & rationale
 
-- Represented brands: Rain Bird (official representation · Belize), Hunter, Netafim, Toro.
+- Represented brands (current): Rain Bird (official representation · Belize), IrrigEasy, Toro.
+- Hunter and Netafim were removed per user request; no longer referenced on any page.
 - Pexels stock photo service is unavailable in this environment.
 - Official brand logos not copied from external sites due to copyright; user must supply logo files (PNG/JPG/SVG) directly if they want them included.
 - Brand cards currently use placeholder icons + brand colors as a safe alternative to official logos.
